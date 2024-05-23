@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ужас Аркхэма</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="header_inner">
+          <div class="logo_and_name">
+            <a class="logo_link" href="index.html"
+              ><img
+                src="images/avatars.jpg"
+                alt="Логотип компании"
+                class="logo_image"
+            /></a>
+            <a href="index.html"
+              ><p class="company_name">Board Game</p></a
+            >
+          </div>
+          <nav class="menu">
+            <ul class="menu_list">
+              <li class="menu_list_item">
+                <a class="menu_list_item_link" href="index.html">Главная</a>
+              </li>
+              <li class="menu_list_item submenu_nav">
+                <a class="menu_list_item_link" href="products.html">Каталог</a
+                ><span
+                  ><img
+                    class="down_arrow_image"
+                    src="images/down_arrow1.svg"
+                    alt="Стрелка вниз"
+                    width="13"
+                    height="15"
+                /></span>
+                <div class="submenu">
+                  <ul class="submenu_items">
+                      <li class="submenu_item"><a href="#">Ужас Аркхэма</a></li>
+                      <li class="submenu_item"><a href="#">Бункер</a></li>
+                      <li class="submenu_item"><a href="#">Тайная долина</a></li>
+                      <li class="submenu_item"><a href="#">Каркассон</a></li>
+                      <li class="submenu_item"><a href="#">Кодовые имена</a></li>
+                      <li class="submenu_item"><a href="#">Ловец снов</a></li>
+                      <li class="submenu_item"><a href="#">Мафия</a></li>
+                      <li class="submenu_item"><a href="#">Обитель тьмы</a></li>
+                      <li class="submenu_item"><a href="#">Битва за Рокуган</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu_list_item">
+                <a class="menu_list_item_link" href="about.html"
+                  >О компании</a
+                >
+              </li>
+              <li class="menu_list_item">
+                <a class="menu_list_item_link" href="reviews.html">Отзывы</a>
+              </li>
+              <li class="menu_list_item">
+                <a class="menu_list_item_link" href="card_registration.html">Бонусы</a>
+              </li>
+            </ul>
+            
+          </nav>
+          <div class="cart_container">
+            <a href="cart.html" class="cart_link"
+              ><img
+                src="images/cart.svg"
+                alt="cart"
+                class="cart_icon"
+                width="30"
+                height="30"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+<main>
+  <div class="container">
+    <div class="card_of_product">
+      <h2 class="product_title">Ужас Аркхэма</h2>
+
+      <div class="rating_bar_1" id="rating">
+        <label for="star5">&#9733;</label>
+        <label for="star4">&#9733;</label>
+        <label for="star3">&#9733;</label>
+        <label for="star2">&#9733;</label>
+        <label for="star1">&#9733;</label>
+        <span class="rating_text">
+          <a href="reviews.html">22 отзыва </a></span
+        >
+      </div>
+      <div class="product_card_container">
+        <div class="container_of_image">
+          <img
+            class="image_product_1"
+            src="images/arkham.jpg"
+            alt="Ужас Аркхэма"
+            width="600"
+            height="600"
+          />
+        </div>
+
+        <div class="specs_container">
+          <table>
+            <tr>
+              <th>Категории</th>
+            </tr>
+            <tr>
+              <td>Детективные игры</td>
+            </tr>
+            <tr>
+              <td>Вселенная лавкрафта</td>
+            </tr>
+            <tr>
+              <td>Для одного</td>
+            </tr>
+            <tr>
+              <td>Хардкорные игры</td>
+            </tr>
+          </table>
+          <div class="pay_container">
+            <p class="price_product">2490 ₽</p>
+            <button class="btn_buy_product">Купить</button>
+            <button class="btn_add_to_cart">Добавить в корзину</button>
+          </div>
+
+            <div class="container_name_rating_bar_2">
+              <a href="reviews.html" class="name_rating_bar_2"
+                >Оставьте отзыв о товаре</a>
+            </div>  
+            <div class="rating_bar_2" id="rating">
+              <input type="radio" id="star5" name="rating" value="5" />
+              <label for="star5">&#9733;</label>
+              <input type="radio" id="star4" name="rating" value="4" />
+              <label for="star4">&#9733;</label>
+              <input type="radio" id="star3" name="rating" value="3" />
+              <label for="star3">&#9733;</label>
+              <input type="radio" id="star2" name="rating" value="2" />
+              <label for="star2">&#9733;</label>
+              <input type="radio" id="star1" name="rating" value="1" />
+              <label for="star1">&#9733;</label>
+            </div>
+        </div>
+
+        <div class="gallery_container">
+          <div
+            class="gallery_image_1"
+            onmouseenter="changeImageGallery('images/arkham.jpg')"
+          >
+            <img
+              src="images/arkham.jpg"
+              width="100"
+              height="100"
+              alt=""
+            />
+          </div>
+          <div
+            class="gallery_image_2"
+            onmouseenter="changeImageGallery('images/arkham1.jpg')"
+          >
+            <img
+              src="images/arkham1.jpg"
+              width="100"
+              height="100"
+              alt=""
+            />
+          </div>
+          <div
+            class="gallery_image_3"
+            onmouseenter="changeImageGallery('images/arkham2.jpg')"
+          >
+            <img
+              src="images/arkham2.jpg"
+              width="100"
+              height="100"
+              alt=""
+            />
+          </div>
+          <div
+            class="gallery_image_3"
+            onmouseenter="changeImageGallery('images/arkham3.jpg')"
+          >
+            <img
+              src="images/arkham3.jpg"
+              width="100"
+              height="100"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="product_description">
+        <p class="description_text">
+          <b>Описание</b>
+          <p class="description_text">Нечто безумное и страшное пробуждается в небольшом городке Аркхэм. Лишь вам, в лице отважного сыщика, под силу остановить те древние и немыслимые кошмары, что в любой момент могут выплеснуться на временно тихие и спокойные улочки Аркхэма...
+          </p>
+          <p class="description_text">
+            Размывая грань между ролевой игрой и традиционными карточными играми, "Ужас Аркхэма: Карточная Игра" открывает новые горизонты для ЖКИ, и горизонты заполнены лавкрафтовским безумием, монстрами и тайнами!
+          </p>
+          <p class="description_text">
+            В роли сыщиков вам предстоит преследовать культы, бороться с порождениями запредельной тьмы, сталкиваться с самими Древними и запечатывать порталы в иные измерения. Ваш персонаж обладает как сильными сторонами, так и недостатками. Более того, не всегда ваш рассудок будет способен выдержать то, что предстоит увидеть там, куда вас бросят недоступные человеческому пониманию силы. Даже сам Аркхэм может сильно измениться в процессе игры и принятия решений.
+          </p>
+          <p class="description_text">
+            Но помните – нет страха более глубокого, чем страх неведомого. Так познайте своего врага, проведите расследование и узнайте тайны, покрытые древностью!
+          </p> 
+          <p class="description_text">
+          <b>Об игре</b>
+          </p>
+          <p class="description_text">
+            "Ужас Аркхэма. Карточная игра" – это кооперативная Живая Карточная Игра в сеттинге мифов Лавкрафта, в которой 1-2 сыщика (а со вторым набором – 3-4) совместно познакомятся с миром оккультизма, древних богов и тайн, параллельно борясь и с внутренними демонами из своего прошлого.
+          </p>
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+
+    <footer>
+        <div class="container">
+            <div class="footer_menu">
+                <ul class="footer_menu_list">
+                    <p class="footer_menu_title">Контакты</p>
+                    <li class="footer_menu_item"> г. Ростов-на-Дону, ул. Грисенко 18, 109544</li>
+                    <li class="footer_menu_item">8-955-146-22-65</li>
+                    <ul class="social">
+                        <li class="social_item">
+                            <a href="#" class="social_item_link"><img src="images/telegram.svg" alt="Телеграм" class="social_item_image"></a>
+                        </li>
+                        <li class="social_item">
+                            <a href="#" class="social_item_link"><img src="images/vk.svg" alt="ВКонтакте" class="social_item_image"></a>
+                        </li>
+                        <li class="social_item">
+                            <a href="#" class="social_item_link"><img src="images/youtube.svg" alt="Youtube" class="social_item_image"></a>
+                        </li>
+                        <li class="social_item">
+                            <a href="#" class="social_item_link"><img src="images/twitter.svg" alt="Twitter" class="social_item_image"></a>
+                        </li>
+                        
+                    </ul>
+                </ul>
+                <ul class="footer_menu_list">
+                    <p class="footer_menu_title">Компания</p>
+                    <li class="footer_menu_item"><a href="#">Об интернет-магазине</a></li>
+                    <li class="footer_menu_item"><a href="#">Новости</a></li>
+                    <li class="footer_menu_item"><a href="#">Персональные данные</a></li>
+                    <li class="footer_menu_item"><a href="#">Правила продаж</a></li>
+                    <li class="footer_menu_item"><a href="#">Для бизнеса</a></li>
+                </ul>
+                <ul class="footer_menu_list">
+                    <p class="footer_menu_title">Помощь и поддержка</p>
+                    <li class="footer_menu_item"><a href="#">Доставка</a></li>
+                    <li class="footer_menu_item"><a href="#">Способы оплаты</a></li>
+                    <li class="footer_menu_item"><a href="#">Банковская карта</a></li>
+                    <li class="footer_menu_item"><a href="#">Гарантии</a></li>
+                    <li class="footer_menu_item"><a href="#">Статус заказа</a></li>
+                    <li class="footer_menu_item"><a href="#">Кредиты</a></li>
+                    <li class="footer_menu_item"><a href="#">Как оформить заказ</a></li>
+                    <li class="footer_menu_item"><a href="#">Договор оферты</a></li>
+                    <li class="footer_menu_item"><a href="#">Помощь</a></li>
+                </ul>
+                <ul class="footer_menu_list">
+                    <p class="footer_menu_title">Ваши привелегии</p>
+                    <li class="footer_menu_item"><a href="#">Акции</a></li>
+                    <li class="footer_menu_item"><a href="#">Баланс бонусной карты</a></li>
+                    <li class="footer_menu_item"><a href="#">Бонусная программа</a></li>
+                    <li class="footer_menu_item"><a href="#">Купоны и сертификаты</a></li>
+                    <li class="footer_menu_item"><a href="#">Подарочная карта</a></li>
+                    <li class="footer_menu_item"><a href="#">Обратная связь</a></li>
+                </ul>
+            </div>
+            <p class="footer_copy_text">© 2010-2024 Board Game. Все права защищены.</p>
+        </div>
+    </footer>
+  </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Отзывы</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="container">
+          <div class="header_inner">
+            <div class="logo_and_name">
+              <a class="logo_link" href="index.html"
+                ><img
+                  src="images/avatars.jpg"
+                  alt="Логотип компании"
+                  class="logo_image"
+              /></a>
+              <a href="index.html"
+                ><p class="company_name">Board Game</p></a
+              >
+            </div>
+            <nav class="menu">
+              <ul class="menu_list">
+                <li class="menu_list_item">
+                  <a class="menu_list_item_link" href="index.html">Главная</a>
+                </li>
+                <li class="menu_list_item submenu_nav">
+                  <a class="menu_list_item_link" href="products.html">Каталог</a
+                  ><span
+                    ><img
+                      class="down_arrow_image"
+                      src="images/down_arrow1.svg"
+                      alt="Стрелка вниз"
+                      width="13"
+                      height="15"
+                  /></span>
+                  <div class="submenu">
+                    <ul class="submenu_items">
+                        <li class="submenu_item"><a href="#">Ужас Аркхэма</a></li>
+                        <li class="submenu_item"><a href="#">Бункер</a></li>
+                        <li class="submenu_item"><a href="#">Тайная долина</a></li>
+                        <li class="submenu_item"><a href="#">Каркассон</a></li>
+                        <li class="submenu_item"><a href="#">Кодовые имена</a></li>
+                        <li class="submenu_item"><a href="#">Ловец снов</a></li>
+                        <li class="submenu_item"><a href="#">Мафия</a></li>
+                        <li class="submenu_item"><a href="#">Обитель тьмы</a></li>
+                        <li class="submenu_item"><a href="#">Битва за Рокуган</a></li>               
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu_list_item">
+                  <a class="menu_list_item_link" href="about.html"
+                    >О компании</a
+                  >
+                </li>
+                <li class="menu_list_item">
+                  <a class="menu_list_item_link" href="reviews.html">Отзывы</a>
+                </li>
+                <li class="menu_list_item">
+                  <a class="menu_list_item_link" href="card_registration.html">Бонусы</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="cart_container">
+              <a href="cart.html" class="cart_link"
+                ><img
+                  src="images/cart.svg"
+                  alt="cart"
+                  class="cart_icon"
+                  width="30"
+                  height="30"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="container">
+          <div class="reviews_container">
+            <div class="reviews_form_container">
+              <h2 class="reviews_form_header">Оставьте отзыв о настольной игре</h2>
+              <form action="#" id="form">
+                <label for="input_name"> Введите имя </label>
+                <input
+                  type="text"
+                  id="input_name"
+                  class="input_form"
+                  placeholder="Имя"
+                />
+                <label for="input_email">
+                  Введите адрес электронной почты
+                </label>
+                <input
+                  type="email"
+                  id="input_email"
+                  class="input_form"
+                  placeholder="example@gmail.com"
+                />
+                <label for="input_device"> Введите название игры </label>
+                <input
+                  type="text"
+                  id="input_device"
+                  class="input_form"
+                  placeholder="Бункер"
+                />
+                <label for="">Поставьте оценку настольной игре</label>
+                <div class="rating" id="rating">
+                  <input type="radio" id="star5" name="rating" value="5" />
+                  <label for="star5">&#9733;</label>
+                  <input type="radio" id="star4" name="rating" value="4" />
+                  <label for="star4">&#9733;</label>
+                  <input type="radio" id="star3" name="rating" value="3" />
+                  <label for="star3">&#9733;</label>
+                  <input type="radio" id="star2" name="rating" value="2" />
+                  <label for="star2">&#9733;</label>
+                  <input type="radio" id="star1" name="rating" value="1" />
+                  <label for="star1">&#9733;</label>
+                </div>
+                <label for="text_form"> Введите текст отзыва </label>
+                <textarea id="text_form" cols="30" rows="10"></textarea>
+                <label>Прикрепите фото товара</label>
+                <div class="file-input-wrapper">
+                  <button class="custom-file-button">Выбрать файлы</button>
+                  <input type="file" multiple id="fileInput" />
+                  <div id="fileList"></div>
+                </div>
+                <button class="button_form">Отправить</button>
+              </form>
+            </div>
+
+            <div id="popup" class="popup hidden">
+              <p class="popup_text">Ваш отзыв отправлен!</p>
+            </div>
+
+            <div class="review_items">
+              <h2 class="review_customers">Отзывы других покупателей</h2>
+              <div class="review_item">
+                <span class="review_item_name">Анастасия</span>
+                <span class="review_item_date">9 мая 2023</span>
+                <div class="review_item_rating">
+                  <span id="rating_1">&#9733;</span>
+                  <span id="rating_2">&#9733;</span>
+                  <span id="rating_3">&#9733;</span>
+                  <span id="rating_4">&#9733;</span>
+                  <span id="rating_5">&#9733;</span>
+                  <span id="rating_number">5,0</span>
+                </div>
+                <div class="device_model">
+                  <span class="model">Название игры:</span>
+                  <span class="model_name">Бункер</span>
+                </div>
+                <div class="comment_area">
+                  <p class="comment_text">
+                    Когда я увидела обзор на эту игру, очень захотелось ее приобрести. Мы с друзьями любим скоротать вечерок за настольными играми, классическая «Мафия» уже порядком надоела и захотелось попробовать что-то новенькое. Игра «Бункер» показалась мне отличной...
+                  </p>
+                </div>
+              </div>
+              <div class="review_item">
+                <span class="review_item_name">Иван</span>
+                <span class="review_item_date">19 августа 2021</span>
+                <div class="review_item_rating">
+                  <span id="rating_1">&#9733;</span>
+                  <span id="rating_2">&#9733;</span>
+                  <span id="rating_3">&#9733;</span>
+                  <span id="rating_4">&#9733;</span>
+                  <span id="rating_5">&#9733;</span>
+                  <span id="rating_number">5,0</span>
+                </div>
+                <div class="device_model">
+                  <span class="model">Название игры:</span>
+                  <span class="model_name">Каркассон</span>
+                </div>
+                <div class="comment_area">
+                  <p class="comment_text">
+                    Одна из первых приобретенных нами настольных игр. Коробка и тайлы из плотного картона, деревянные фигурки. В комплекте, как и положено - инструкция. Игра идет сразу с небольшим дополнением - река и аббаты. С аббатами и крестьянами пока не играли, с рекой начали со второго раза.
+                  </p>
+                </div>
+              </div>
+              <div class="review_item">
+                <span class="review_item_name">Анатолий</span>
+                <span class="review_item_date">4 августа 2020</span>
+                <div class="review_item_rating">
+                  <span id="rating_1">&#9733;</span>
+                  <span id="rating_2">&#9733;</span>
+                  <span id="rating_3">&#9733;</span>
+                  <span id="rating_4">&#9733;</span>
+                  <span id="rating_5">&#9733;</span>
+                  <span id="rating_number">5,0</span>
+                </div>
+                <div class="device_model">
+                  <span class="model">Название игры:</span>
+                  <span class="model_name">Кодовые имена</span>
+                </div>
+                <div class="comment_area">
+                  <p class="comment_text">
+                    Услышав, что я коллекционирую игры, ученики из Германии посоветовали приобрести настольную игру Codenames - Кодовые имена от компании GaGaGames. В отличие от игры для эгоистов "Шахматы для одного" эта игра командная. Все новогодние вечера мы...
+Развивает логическое и ассоциативное мышление, внимание к деталям, умение сохранять невозмутимый вид.
+                  </p>
+                </div>
+              </div>
+              <div class="review_item">
+                <span class="review_item_name">Кирилл</span>
+                <span class="review_item_date">22 февраля 2024</span>
+                <div class="review_item_rating">
+                  <span id="rating_1">&#9733;</span>
+                  <span id="rating_2">&#9733;</span>
+                  <span id="rating_3">&#9733;</span>
+                  <span id="rating_4">&#9733;</span>
+                  <span id="rating_5">&#9733;</span>
+                  <span id="rating_number">5,0</span>
+                </div>
+                <div class="device_model">
+                  <span class="model">Название игры:</span>
+                  <span class="model_name">Обитель тьмы</span>
+                </div>
+                <div class="comment_area">
+                  <p class="comment_text">
+                    Долго сомневался, брать или нет (есть из любимых Азул, Эверделл, Лакримоза, Страдающее Средневековье, Горизонты острова духов), понравится ли… в итоге не пожалел! В правилах разобраться недолго, но есть нюансы, которые правила не обьясняют, тут мы с ребятами сами решали, как поступать. Игра сложная)) выиграть нелегко. Реиграбельность очень высокая. Дизайн приятный. Все элементы игры задействованы. От игры получили огромное удовольствие, хотим играть еще. Кстати, одному тоже неплохо играть) О покупке не жалеем. Подойдет, как новичкам, так и опытным бордгеймщикам. Советуем однозначно! 100/100
+                  </p>
+                </div>
+              </div>             
+              <div class="review_item">
+                <span class="review_item_name">Даниил</span>
+                <span class="review_item_date">8 июля 2023</span>
+                <div class="review_item_rating">
+                  <span id="rating_1">&#9733;</span>
+                  <span id="rating_2">&#9733;</span>
+                  <span id="rating_3">&#9733;</span>
+                  <span id="rating_4">&#9733;</span>
+                  <span id="rating_5">&#9734;</span>
+                  <span id="rating_number" 4,0></span>
+                </div>
+                <div class="device_model">
+                  <span class="model">Название игры:</span>
+                  <span class="model_name">Битва за рокуган</span>
+                </div>
+                <div class="comment_area">
+                  <p class="comment_text">
+                    Отличная игра. Простая в освоении, но интересная, с тактикой, соперничеством. есть возможность и для расчета и для блефа, партии без спешки длятся час-полтора.
+Изготовление тоже качественное.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button class="show_more">Смотреть еще</button>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="container">
+          <div class="footer_menu">
+            <ul class="footer_menu_list">
+              <p class="footer_menu_title">Контакты</p>
+              <li class="footer_menu_item">
+                г. Ростов-на-Дону, ул. Грисенко 18, 109544
+              </li>
+              <li class="footer_menu_item">8-955-146-22-65</li>
+              <ul class="social">
+                <li class="social_item">
+                  <a href="#" class="social_item_link"
+                    ><img
+                      src="images/telegram.svg"
+                      alt="Телеграм"
+                      class="social_item_image"
+                  /></a>
+                </li>
+                <li class="social_item">
+                  <a href="#" class="social_item_link"
+                    ><img
+                      src="images/vk.svg"
+                      alt="ВКонтакте"
+                      class="social_item_image"
+                  /></a>
+                </li>
+                <li class="social_item">
+                  <a href="#" class="social_item_link"
+                    ><img
+                      src="images/youtube.svg"
+                      alt="Youtube"
+                      class="social_item_image"
+                  /></a>
+                </li>
+                <li class="social_item">
+                  <a href="#" class="social_item_link"
+                    ><img
+                      src="images/twitter.svg"
+                      alt="Twitter"
+                      class="social_item_image"
+                  /></a>
+                </li>
+              </ul>
+            </ul>
+            <ul class="footer_menu_list">
+              <p class="footer_menu_title">Компания</p>
+              <li class="footer_menu_item">
+                <a href="#">Об интернет-магазине</a>
+              </li>
+              <li class="footer_menu_item"><a href="#">Новости</a></li>
+              <li class="footer_menu_item">
+                <a href="#">Персональные данные</a>
+              </li>
+              <li class="footer_menu_item"><a href="#">Правила продаж</a></li>
+              <li class="footer_menu_item"><a href="#">Для бизнеса</a></li>
+            </ul>
+            <ul class="footer_menu_list">
+              <p class="footer_menu_title">Помощь и поддержка</p>
+              <li class="footer_menu_item"><a href="#">Доставка</a></li>
+              <li class="footer_menu_item"><a href="#">Способы оплаты</a></li>
+              <li class="footer_menu_item"><a href="#">Банковская карта</a></li>
+              <li class="footer_menu_item"><a href="#">Гарантии</a></li>
+              <li class="footer_menu_item"><a href="#">Статус заказа</a></li>
+              <li class="footer_menu_item"><a href="#">Кредиты</a></li>
+              <li class="footer_menu_item">
+                <a href="#">Как оформить заказ</a>
+              </li>
+              <li class="footer_menu_item"><a href="#">Договор оферты</a></li>
+              <li class="footer_menu_item"><a href="#">Помощь</a></li>
+            </ul>
+            <ul class="footer_menu_list">
+              <p class="footer_menu_title">Ваши привелегии</p>
+              <li class="footer_menu_item"><a href="#">Акции</a></li>
+              <li class="footer_menu_item">
+                <a href="#">Баланс бонусной карты</a>
+              </li>
+              <li class="footer_menu_item">
+                <a href="#">Бонусная программа</a>
+              </li>
+              <li class="footer_menu_item">
+                <a href="#">Купоны и сертификаты</a>
+              </li>
+              <li class="footer_menu_item"><a href="#">Подарочная карта</a></li>
+              <li class="footer_menu_item"><a href="#">Обратная связь</a></li>
+            </ul>
+          </div>
+          <p class="footer_copy_text">
+            © 2010-2024 Board Game. Все права защищены.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/addFile.js"></script>
+  </body>
+</html>

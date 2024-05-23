@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оформление заказа</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="container">
+          <div class="header_inner">
+            <div class="logo_and_name">
+              <a class="logo_link" href="index.html"
+                ><img
+                  src="images/avatars.jpg"
+                  alt="Логотип компании"
+                  class="logo_image"
+              /></a>
+              <a href="index.html"
+                ><p class="company_name">Board Game</p></a
+              >
+            </div>
+            <nav class="menu">
+              <ul class="menu_list">
+                <li class="menu_list_item">
+                  <a class="menu_list_item_link" href="index.html">Главная</a>
+                </li>
+                <li class="menu_list_item submenu_nav">
+                  <a class="menu_list_item_link" href="products.html">Каталог</a
+                  ><span
+                    ><img
+                      class="down_arrow_image"
+                      src="images/down_arrow1.svg"
+                      alt="Стрелка вниз"
+                      width="13"
+                      height="15"
+                  /></span>
+                  <div class="submenu">
+                    <ul class="submenu_items">
+                      <li class="submenu_item"><a href="#">Ужас Аркхэма</a></li>
+                      <li class="submenu_item"><a href="#">Бункер</a></li>
+                      <li class="submenu_item"><a href="#">Тайная долина</a></li>
+                      <li class="submenu_item"><a href="#">Каркассон</a></li>
+                      <li class="submenu_item"><a href="#">Кодовые имена</a></li>
+                      <li class="submenu_item"><a href="#">Ловец снов</a></li>
+                      <li class="submenu_item"><a href="#">Мафия</a></li>
+                      <li class="submenu_item"><a href="#">Обитель тьмы</a></li>
+                      <li class="submenu_item"><a href="#">Битва за Рокуган</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu_list_item">
+                  <a class="menu_list_item_link" href="about.html"
+                    >О компании</a
+                  >
+                </li>
+                <li class="menu_list_item">
+                  <a class="menu_list_item_link" href="reviews.html">Отзывы</a>
+                </li>
+                <li class="menu_list_item">
+                  <a class="menu_list_item_link" href="card_registration.html">Бонусы</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="cart_container">
+              <a href="cart.html" class="cart_link"
+                ><img
+                  src="images/cart.svg"
+                  alt="cart"
+                  class="cart_icon"
+                  width="30"
+                  height="30"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="container">
+          <div class="container_of_payment">
+            <h2 class="order_title">Оформление заказа</h2>
+            <form id="checkout-form">
+              <div class="form-step">
+                <h3 class="step_order">Шаг 1: Контактные данные</h3>
+                <div class="input_order">
+                  <input type="text" name="name" placeholder="ФИО" required />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Телефон"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-step">
+                <h3 class="step_order">Шаг 2: Адрес доставки</h3>
+                <textarea
+                  class="address_express"
+                  name="address"
+                  placeholder="Адрес доставки"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-step">
+                <h3 class="step_order">Шаг 3: Способ оплаты</h3>
+                <input
+                  type="radio"
+                  name="payment-method"
+                  value="cash"
+                  id="cash-payment"
+                />
+                <label for="cash-payment">Оплата при получении</label><br />
+                <input
+                  type="radio"
+                  name="payment-method"
+                  value="cash"
+                  id="cash-payment"
+                />
+                <label for="cash-payment">Банковской картой</label><br />
+                <input
+                  type="radio"
+                  name="payment-method"
+                  value="cash"
+                  id="cash-payment"
+                />
+                <label for="cash-payment">Оплата по СБП</label>
+              </div>
+
+              <button class="pay_order" type="submit" id="checkout-button">
+                Оформить заказ
+              </button>
+            </form>
+
+            <div id="success-modal" class="modal_window">
+              <div class="modal-content">
+                <div class="close_container">
+                  <span class="close">&times;</span>
+                </div>
+                <p>Ваш заказ успешно оформлен!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="container">
+          <div class="footer_menu">
+            <ul class="footer_menu_list">
+              <p class="footer_menu_title">Контакты</p>
+              <li class="footer_menu_item">
+                г. Ростов-на-Дону, ул. Грисенко 18, 109544
+              </li>
+              <li class="footer_menu_item">8-955-146-22-65</li>
+              <ul class="social">
+                <li class="social_item">
+                  <a href="#" class="social_item_link"
+                    ><img
+                      src="images/telegram.svg"
+                      alt="Телеграм"
+                      class="social_item_image"
+                  /></a>
+                </li>
+                <li class="social_item">
+                  <a href="#" class="social_item_link"
+                    ><img
+                      src="images/vk.svg"
+                      alt="ВКонтакте"
+                      class="social_item_image"
+                  /></a>
+                </li>
+                <li class="social_item">
+                  <a href="#" class="social_item_link"
+                    ><img
+                      src="images/youtube.svg"
+                      alt="Youtube"
+                      class="social_item_image"
+                  /></a>
+                </li>
+                <li class="social_item">
+                  <a href="#" class="social_item_link"
+                    ><img
+                      src="images/twitter.svg"
+                      alt="Twitter"
+                      class="social_item_image"
+                  /></a>
+                </li>
+              </ul>
+            </ul>
+            <ul class="footer_menu_list">
+              <p class="footer_menu_title">Компания</p>
+              <li class="footer_menu_item">
+                <a href="#">Об интернет-магазине</a>
+              </li>
+              <li class="footer_menu_item"><a href="#">Новости</a></li>
+              <li class="footer_menu_item">
+                <a href="#">Персональные данные</a>
+              </li>
+              <li class="footer_menu_item"><a href="#">Правила продаж</a></li>
+              <li class="footer_menu_item"><a href="#">Для бизнеса</a></li>
+            </ul>
+            <ul class="footer_menu_list">
+              <p class="footer_menu_title">Помощь и поддержка</p>
+              <li class="footer_menu_item"><a href="#">Доставка</a></li>
+              <li class="footer_menu_item"><a href="#">Способы оплаты</a></li>
+              <li class="footer_menu_item"><a href="#">Банковская карта</a></li>
+              <li class="footer_menu_item"><a href="#">Гарантии</a></li>
+              <li class="footer_menu_item"><a href="#">Статус заказа</a></li>
+              <li class="footer_menu_item"><a href="#">Кредиты</a></li>
+              <li class="footer_menu_item">
+                <a href="#">Как оформить заказ</a>
+              </li>
+              <li class="footer_menu_item"><a href="#">Договор оферты</a></li>
+              <li class="footer_menu_item"><a href="#">Помощь</a></li>
+            </ul>
+            <ul class="footer_menu_list">
+              <p class="footer_menu_title">Ваши привелегии</p>
+              <li class="footer_menu_item"><a href="#">Акции</a></li>
+              <li class="footer_menu_item">
+                <a href="#">Баланс бонусной карты</a>
+              </li>
+              <li class="footer_menu_item">
+                <a href="#">Бонусная программа</a>
+              </li>
+              <li class="footer_menu_item">
+                <a href="#">Купоны и сертификаты</a>
+              </li>
+              <li class="footer_menu_item"><a href="#">Подарочная карта</a></li>
+              <li class="footer_menu_item"><a href="#">Обратная связь</a></li>
+            </ul>
+          </div>
+          <p class="footer_copy_text">
+            © 2010-2024 Board Game. Все права защищены.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/order.js"></script>
+  </body>
+</html>
